@@ -1,3 +1,14 @@
+// on a mac terminal, enter ls /dev/tty.* to get a list of devices, get the addresss for bluetooth
+// run screen /dev/tty.hc-blah to see thge output.
+
+//VCC>>>>3.3v
+//
+//GND>>>>GND
+//
+//TXD>>>>RXD
+//
+//RXD>>>>TXD
+
 String message; //string that stores the incoming message
 int a;
 void setup()
@@ -20,12 +31,14 @@ void loop()
       message=""; //clear the data
     }
   }
-  Serial.println('*');
-  Serial.println(a);
-  a = a+1;
-  if(a > 9000){
-    a = 0;  
-  }
+  //  Serial.println('*');
+  //  Serial.println(a);
+  //  a = a+1;
+  //  if(a > 9000){
+  //    a = 0;  
+  //  }
   // delay(5000); //delay
+  Serial.print("AT",);
+  delay(1000);
 }
     
